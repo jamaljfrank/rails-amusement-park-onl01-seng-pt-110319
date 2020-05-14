@@ -2,9 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :authentication_check, :admin
  
-  def home
-  end
-
   def authentication_check
     if !logged_in?
       redirect_to root_path
